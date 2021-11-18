@@ -24,6 +24,7 @@ deploy:
   script: echo deploy ...
   only:
     - master
+    - master-ci
   except:
     variables:
       - $SKIP_STAGE_deploy == "1" && $SKIP_BRANCH == $CI_COMMIT_REF_NAME
