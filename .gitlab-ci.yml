@@ -1,12 +1,22 @@
 # .gitlab-ci.yml
 
-job1:
-  script: |
-    echo 1
-    echo 2 && false
-    echo 3
-job2:
-  script:
-    - echo 1
-    - echo 2 && false
-    - echo 3
+stages:
+  - build
+  - test
+  - deploy
+
+foo:
+  stage: build
+  script: echo Build! && sleep 10
+
+bar:
+  stage: test
+  script: echo Test1!
+
+baz:
+  stage: test
+  script: echo Test2! && sleep 10
+
+deploy:
+  stage: deploy
+  script: echo Test2!
