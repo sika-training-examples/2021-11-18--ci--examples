@@ -1,12 +1,4 @@
 # .gitlab-ci.yml
-
-variables:
-  TAG: $CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
-  IMAGE: $CI_REGISTRY_IMAGE:$TAG
-  BASE_HOST: sikademo.com
-  HOST: $CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG.$BASE_HOST
-
 job:
   script:
-    - echo docker build . -t $IMAGE
-    - echo helm install ... --set host=$HOST
+    - env | grep XXX
