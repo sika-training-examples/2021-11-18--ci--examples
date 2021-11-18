@@ -32,3 +32,8 @@ test:
   stage: test
   script: ls *
   dependencies: []
+
+
+test2:
+  stage: test
+  script: cat out/index.html
