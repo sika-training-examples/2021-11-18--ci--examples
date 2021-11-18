@@ -2,7 +2,7 @@
 test:
   image: ondrejsika/pytest
   script:
-    - pytest --junitxml=report.xml
+    - pytest --junitxml=report.xml && true
     - cp report.xml report.html
     - cp report.xml report.txt
     - cat report.xml
