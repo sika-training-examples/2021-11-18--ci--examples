@@ -6,6 +6,10 @@ SERVICES = (
     "foo",
     "bar",
     "baz",
+    "proj-a",
+    "proj-b",
+    "proj-c",
+    "proj-d",
 )
 
 def make_service(name):
