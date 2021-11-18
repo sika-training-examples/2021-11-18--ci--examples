@@ -8,7 +8,7 @@ stages:
 
 build:
   stage: build
-  script: echo Build service B
+  script: echo Build service B 
 
 test:
   stage: test

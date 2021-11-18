@@ -7,7 +7,7 @@ stages:
 
 build:
   stage: build
-  script: echo Build service A
+  script: echo Build service A && sleep 10
 
 deploy:
   stage: deploy
