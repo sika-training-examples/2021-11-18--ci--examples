@@ -21,7 +21,7 @@ test:
 
 deploy:
   stage: deploy
-  script: echo deploy
+  script: echo deploy ...
   except:
     variables:
       - $SKIP_STAGE_deploy == "1" && $SKIP_BRANCH == $CI_COMMIT_REF_NAME
