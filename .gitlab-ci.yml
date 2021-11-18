@@ -1,13 +1,20 @@
 # .gitlab-ci.yml
 
-Build A:
-  script: echo Cuild A ...
-  only:
-    changes:
-      - a/**
+stages:
+  - build
+  - test
+  - deploy
 
-Build B:
-  script: echo Cuild B ...
-  only:
-    changes:
-      - b/**
+build:
+  stage: build
+  script: echo build && sleep 10
+
+
+test:
+  stage: test
+  script: echo test && sleep 10
+
+
+deploy:
+  stage: deploy
+  script: echo build
