@@ -1,6 +1,15 @@
-# .gitlab-ci.yml (library bar)
-job:
-  script: Do something
+tag:
+  image: sikalabs/ci
+  when: manual
+  only:
+    variables:
+      - $TAG
+  script:
+    - git tag $TAG
+    - git remote set-url origin https://ondrejsika:asdfasdf@$CI_SERVER_HOST/$CI_PROJECT_PATH.git
+    - git push --tags
 
-triger-pipelines:
-  trigger: ondrejsika/example
+deploy:
+  only:
+    - tags
+  script: echo deplpy
