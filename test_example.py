@@ -2,7 +2,7 @@ import time
 
 # test_example.py
 def test_ok():
-    assert True
+    assert Truey
 
 def test_err():
     time.sleep(10)
