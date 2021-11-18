@@ -1,20 +1,13 @@
 # .gitlab-ci.yml
 
-stages:
-  - build
-  - deploy
-
-build:
-  stage: build
-  script: echo Build ...
+Build A:
+  script: echo Cuild A ...
   only:
-    - master
-    - merge_requests
+    changes:
+      - a/**
 
-deploy:
-  stage: deploy
-  script: echo Deploy ...
+Build B:
+  script: echo Cuild B ...
   only:
-    - master
-  when: manual
-  allow_failure: false
+    changes:
+      - b/**
