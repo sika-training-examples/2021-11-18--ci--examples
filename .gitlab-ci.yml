@@ -1,15 +1,36 @@
-stages:
-  - deploy prod
-  - test prod
+# .gitlab-ci.yml
 
-deploy prod:
-  stage: deploy prod
+stages:
+  - unit_test
+  - integration_test
+  - build
+  - deploy
+
+unit_test:
+  stage: unit_test
+  script: echo Unit Test ...
+  only:
+    - branches
+    - tags
+    - merge_requests
+
+integration_test:
+  stage: integration_test
+  script: echo Integration Test ...
+  only:
+    - merge_requests
+
+build:
+  stage: build
+  script: echo Build ...
+  only:
+    - master
+    - tags
+
+deploy:
+  stage: deploy
+  script: echo Deploy ...
+  only:
+    - tags
   when: manual
   allow_failure: false
-  script:
-    - echo Deploy ...
-
-test prod:
-  stage: test prod
-  script:
-    - echo Test ...
