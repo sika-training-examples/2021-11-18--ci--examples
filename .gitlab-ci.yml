@@ -2,3 +2,4 @@
 job:
   script:
     - env | grep XXX
+    - echo xxxasdfasdfyyyy
