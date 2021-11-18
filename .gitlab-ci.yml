@@ -3,6 +3,10 @@ test:
   image: ondrejsika/pytest
   script:
     - pytest --junitxml=report.xml
+    - cp report.xml report.html
+    - cp report.xml report.txt
   artifacts:
+    paths:
+      - report.*
     reports:
       junit: report.xml
