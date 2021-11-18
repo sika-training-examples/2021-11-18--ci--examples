@@ -5,12 +5,12 @@ stages:
   - test
   - deploy
 
-build:
+.build:
   stage: build
   script: echo build && sleep 10
 
 
-test:
+.test:
   stage: test
   script: echo test && sleep 10
 
