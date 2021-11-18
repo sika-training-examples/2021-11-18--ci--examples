@@ -1,5 +1,5 @@
 # .gitlab-ci.yml
 job:
+  environment: $CI_COMMIT_REF_NAME
   script:
-    - env | grep XXX
-    - echo xxxasdfasdfyyyy
+    - echo $FOO
