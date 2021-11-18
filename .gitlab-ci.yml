@@ -1,10 +1,14 @@
-# .gitlab-ci.yml
+stage:
+  - deploy prod
+  - test prod
 
-test:
+deploy prod:
+  stage: deploy prod
   when: manual
-  script: echo test ... && false
+  script:
+    - echo Deploy ... && false
 
-test2:
-  when: manual
-  script: echo test ... && false
-  allow_failure: false
+test prod:
+  stage: test prod
+  script:
+    - echo Test ...
