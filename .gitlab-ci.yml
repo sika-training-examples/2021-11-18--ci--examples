@@ -3,10 +3,10 @@
 job1:
   script: |
     echo 1
-    echo 2
+    echo 2 && false
     echo 3
 job2:
   script:
     - echo 1
-    - echo 2
+    - echo 2 && false
     - echo 3
