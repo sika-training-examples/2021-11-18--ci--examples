@@ -5,6 +5,7 @@ test:
     - pytest --junitxml=report.xml
     - cp report.xml report.html
     - cp report.xml report.txt
+    - cat report.xml
   artifacts:
     paths:
       - report.*
