@@ -1,4 +1,12 @@
-job:
-  script:
-    - echo docker build . -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
-    - echo helm install ... --set host=$CI_PROJECT_PATH_SLUG-$CI_COMMIT_REF_SLUG.sikademo.com
+# .gitlab-ci.yml
+
+variables:
+  XXX_GLOBAL: global
+
+job1:
+  script: env | grep XXX
+
+job2:
+  variables:
+    XXX_LOCAL: local
+  script: env | grep XXX
