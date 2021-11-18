@@ -1,3 +1,4 @@
+image:  node
 job:
   variables:
     GIT_CLEAN_FLAGS: -ffdx -e .yarn-cache
